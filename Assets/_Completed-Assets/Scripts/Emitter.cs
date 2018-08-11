@@ -6,11 +6,8 @@ public class Emitter : MonoBehaviour
     // Waveプレハブを格納する
     public GameObject[] waves;
 
-    // TargetPointを作成する
-    public GameObject[] TargetPoints;
-
-    // Bossオブジェクトを格納する
-    public GameObject Boss;
+    // BossDummyオブジェクトを格納する
+    public GameObject BossDummy;
 
     // 現在のWave
     public int currentWave;
@@ -54,9 +51,9 @@ public class Emitter : MonoBehaviour
             Destroy(g);
 
             // 格納されているWaveを全て実行したらBossのゲームオブジェクトを生成する
-            if (waves.Length  <= ++currentWave)
+            if (++currentWave >= waves.Length)
             {
-                Instantiate(Boss);
+                Instantiate(BossDummy);
                 yield break;
             }
         }

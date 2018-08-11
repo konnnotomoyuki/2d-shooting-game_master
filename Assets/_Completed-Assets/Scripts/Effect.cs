@@ -8,7 +8,13 @@ public class Effect : MonoBehaviour
 {
     Image image;
 
-    private int intWaveLength;   
+    bool blnColorChange = true;
+
+    private int intWaveLength;
+
+    private float timeout = 60f;
+
+    private float timeelapsed = 0;
 
     // Use this for initialization
     void Start ()
@@ -22,13 +28,24 @@ public class Effect : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if (FindObjectOfType<Emitter>().currentWave == 0)
+        //StartCoroutine(ColorChange(3f));
+
+        if (blnColorChange == true)
         {
-            this.image.color = new Color(20f, 0, 0, 20f);
+            this.image.color = new Color(0.5f, 0f, 0f, 0.5f);
+            blnColorChange = false;
         }
         else
         {
-            this.image.color = Color.Lerp(this.image.color, Color.clear, Time.deltaTime);
+            this.image.color = Color.Lerp(this.image.color, Color.clear, Time.deltaTime); ;
+            timeelapsed += 1f;
+
+            if (timeelapsed > timeout)
+            {
+                blnColorChange = true;
+                timeelapsed = 0;
+            }
         }
     }
+    
 }

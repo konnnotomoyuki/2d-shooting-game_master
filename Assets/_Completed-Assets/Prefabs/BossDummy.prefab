@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1595903738656584}
+  m_RootGameObject: {fileID: 1824963991265148}
   m_IsPrefabParent: 1
---- !u!1 &1595903738656584
+--- !u!1 &1824963991265148
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4533266627606324}
-  - component: {fileID: 212956521936562800}
-  - component: {fileID: 95707239295515700}
-  - component: {fileID: 50545046459077858}
-  - component: {fileID: 60089552452957256}
-  - component: {fileID: 114047034851939604}
+  - component: {fileID: 4112419292585726}
+  - component: {fileID: 212868002985803518}
+  - component: {fileID: 95259596644260630}
+  - component: {fileID: 50129886011598986}
+  - component: {fileID: 60173951770663262}
+  - component: {fileID: 114125640438250920}
   m_Layer: 9
   m_Name: BossDummy
   m_TagString: Untagged
@@ -31,26 +31,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4533266627606324
+--- !u!4 &4112419292585726
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.2, y: 4.96, z: 0}
+  m_LocalPosition: {x: -0.06581942, y: 5.1997724, z: 0}
   m_LocalScale: {x: 4.872544, y: 12.78218, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!50 &50545046459077858
+--- !u!50 &50129886011598986
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -64,12 +64,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &60089552452957256
+--- !u!60 &60173951770663262
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -95,13 +95,13 @@ PolygonCollider2D:
       - {x: -0.021692354, y: -0.11548971}
       - {x: 0.16354573, y: -0.07341202}
       - {x: 0.17211868, y: -0.014127714}
---- !u!95 &95707239295515700
+--- !u!95 &95259596644260630
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 0}
@@ -113,12 +113,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114047034851939604
+--- !u!114 &114125640438250920
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 686a64b70e36a974e94c66550a297dfe, type: 3}
@@ -126,16 +126,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10000
   speed: {x: 0.02, y: 0.02}
-  FirstTarget: {fileID: 1643413183019010, guid: c99c383aa0c4cff4dbafc2d0359f3e76,
+  FirstTarget: {fileID: 1573342145629772, guid: c99c383aa0c4cff4dbafc2d0359f3e76,
     type: 2}
   Boss: {fileID: 1839928379214640, guid: 1794df98af34fc54da9753bb81f243c2, type: 2}
   position: {x: 0, y: 0}
---- !u!212 &212956521936562800
+--- !u!212 &212868002985803518
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1595903738656584}
+  m_GameObject: {fileID: 1824963991265148}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0

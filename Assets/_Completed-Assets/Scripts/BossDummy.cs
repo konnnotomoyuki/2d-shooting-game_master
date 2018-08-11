@@ -13,12 +13,14 @@ public class BossDummy : MonoBehaviour
     // 速度
     public Vector2 speed = new Vector2(0.02f, 0.02f);
 
-    public GameObject FirstTarget;
+    public GameObject FirstTarget;     
 
     public GameObject Boss;
 
     // 現在位置
     public Vector2 position;
+
+    private GameObject Canvas;
 
     // Spaceshipコンポーネント
     Spaceship spaceship;
@@ -32,6 +34,12 @@ public class BossDummy : MonoBehaviour
 
         rad = Mathf.Atan2(FirstTarget.transform.position.y - transform.position.y,
                           FirstTarget.transform.position.x - transform.position.x);
+
+        Canvas = GameObject.Find("Canvas");
+
+        Canvas.transform.Find("Effect").gameObject.SetActive(true);
+
+        FindObjectOfType<Manager>().BossAppear();
     }
 
     private void Update()
@@ -43,6 +51,8 @@ public class BossDummy : MonoBehaviour
         else if (transform.position.y < FirstTarget.transform.position.y)
         {
             Instantiate(Boss);
+            Canvas.transform.Find("Effect").gameObject.SetActive(false);
+            FindObjectOfType<Manager>().AppearStop();
             Destroy(this.gameObject);
         }
     }

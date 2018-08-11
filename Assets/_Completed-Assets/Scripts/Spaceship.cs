@@ -10,6 +10,8 @@ public class Spaceship : MonoBehaviour
     // 弾を撃つ間隔
     public float shotDelay;
 
+    public float size = 1;
+
     // 弾のPrefab
     public GameObject bullet;
 
@@ -28,10 +30,39 @@ public class Spaceship : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // 爆発の作成
+    // 敵サイズの違いによる爆発の作成
     public void Explosion()
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+        if (size < 2)
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+        }
+        else if(size >= 2)
+        {
+            if (size == 2)
+            {
+                Explode();
+            }
+            else if(size == 3)
+            {
+                InvokeRepeating("Explode", 0.1f, 0.1f);
+                InvokeRepeating("Explode", 0.5f, 0.1f);
+                InvokeRepeating("Explode", 0.5f, 0.1f);
+                InvokeRepeating("Explode", 0.5f, 0.1f);
+            }
+        }
+    }
+
+    public void Explode()
+    {
+        float x = Random.Range(-0.7f, 0.7f);
+        float y = Random.Range(-0.7f, 0.7f);
+
+        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
     }
 
     // 弾の作成

@@ -1155,6 +1155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   shotDelay: 0.6
+  size: 2
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
@@ -1171,6 +1172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   shotDelay: 0.6
+  size: 2
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
@@ -1213,6 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   shotDelay: 0.6
+  size: 2
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}

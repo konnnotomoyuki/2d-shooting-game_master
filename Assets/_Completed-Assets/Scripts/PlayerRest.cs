@@ -8,21 +8,32 @@ public class PlayerRest : MonoBehaviour
 
     public GameObject Rest2;
 
+    private int intPlayerNum;
+
     // Use this for initialization
     void Update ()
     {
-        if (FindObjectOfType<Player>().intPlayerNum == 3)
+        try
         {
-            Rest2.SetActive(true);
-            Rest1.SetActive(true);
+            intPlayerNum = FindObjectOfType<Player>().intPlayerNum;
+
+            if (intPlayerNum == 3)
+            {
+                Rest2.SetActive(true);
+                Rest1.SetActive(true);
+            }
+            else if (intPlayerNum == 2)
+            {
+                Rest2.SetActive(false);
+            }
+            else if (intPlayerNum == 1)
+            {
+                Rest1.SetActive(false);
+            }
         }
-        else if (FindObjectOfType<Player>().intPlayerNum == 2)
+        catch
         {
-            Rest2.SetActive(false);
-        }
-        else if (FindObjectOfType<Player>().intPlayerNum == 1)
-        {
-            Rest1.SetActive(false);
-        }
+            intPlayerNum = 3;
+        }        
     }	
 }

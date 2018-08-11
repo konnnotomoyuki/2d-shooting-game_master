@@ -270,12 +270,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b5cf514ea2bd24c92d0799a6abc11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  hp: 1
   point: 100
   intCurrentNum: 0
+  intBlinkNum: 20
   speed: {x: 0.02, y: 0.02}
-  FirstTarget: {fileID: 1643413183019010, guid: c99c383aa0c4cff4dbafc2d0359f3e76,
-    type: 2}
   TargetObjects:
   - {fileID: 1897641092358256, guid: 1a5010cb73a6d4e4897230a96f50aa2a, type: 2}
   - {fileID: 1328579996868594, guid: 5bb64f85b5a69b140a4707b2d3ddb0bb, type: 2}
@@ -294,6 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.5
   shotDelay: 0.3
+  size: 3
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
