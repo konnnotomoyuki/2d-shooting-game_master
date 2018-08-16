@@ -21,6 +21,9 @@ public class Spaceship : MonoBehaviour
     // 爆発のPrefab
     public GameObject explosion;
 
+    // 音を出さない爆発のPrefab
+    public GameObject s_explosion;
+
     // アニメーターコンポーネント
     private Animator animator;
 
@@ -41,28 +44,31 @@ public class Spaceship : MonoBehaviour
         {
             if (size == 2)
             {
-                Explode();
+                InvokeRepeating("Explode", 0.1f, 0.1f);
             }
             else if(size == 3)
             {
                 InvokeRepeating("Explode", 0.1f, 0.1f);
-                InvokeRepeating("Explode", 0.5f, 0.1f);
-                InvokeRepeating("Explode", 0.5f, 0.1f);
-                InvokeRepeating("Explode", 0.5f, 0.1f);
+                InvokeRepeating("Explode", 1.0f, 0.1f);
+                InvokeRepeating("Explode", 1.0f, 0.1f);
+                InvokeRepeating("Explode", 1.0f, 0.1f);
             }
         }
     }
 
     public void Explode()
     {
-        float x = Random.Range(-0.7f, 0.7f);
-        float y = Random.Range(-0.7f, 0.7f);
+        float x = Random.Range(-0.7f, 0.7f); float y = Random.Range(-0.7f, 0.7f);
 
         Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
+        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
+        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
+        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
+        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
+        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
     }
 
     // 弾の作成

@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 95864778690034246}
   - component: {fileID: 50765129659265504}
   - component: {fileID: 114242600152477358}
-  - component: {fileID: 114407926313394822}
   - component: {fileID: 60806378666915610}
+  - component: {fileID: 114836954247732536}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 95747746147752716}
   - component: {fileID: 50179411322542256}
   - component: {fileID: 114042294046098940}
-  - component: {fileID: 114549729900803600}
   - component: {fileID: 60393708334020838}
+  - component: {fileID: 114684796016836306}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 95170824580662176}
   - component: {fileID: 50440377152616876}
   - component: {fileID: 114337881787644808}
-  - component: {fileID: 114871921814644986}
   - component: {fileID: 60919831524325998}
+  - component: {fileID: 114240429575782760}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -632,6 +632,20 @@ MonoBehaviour:
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
+  s_explosion: {fileID: 0}
+--- !u!114 &114240429575782760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565421006159064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  point: 100
 --- !u!114 &114242600152477358
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,6 +663,7 @@ MonoBehaviour:
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
+  s_explosion: {fileID: 0}
 --- !u!114 &114337881787644808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -666,20 +681,8 @@ MonoBehaviour:
   bullet: {fileID: 1323394892125834, guid: 8db569e7b8bb29e4f8ca7afa1c3d7b3f, type: 2}
   canShot: 1
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
---- !u!114 &114407926313394822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1083149256481176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  point: 100
---- !u!114 &114549729900803600
+  s_explosion: {fileID: 0}
+--- !u!114 &114684796016836306
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -687,24 +690,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1279093763452738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 5
   point: 100
---- !u!114 &114871921814644986
+  speed: {x: 0.03, y: 0.03}
+--- !u!114 &114836954247732536
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1565421006159064}
+  m_GameObject: {fileID: 1083149256481176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 5
   point: 100
+  speed: {x: 0.03, y: 0.03}
 --- !u!212 &212254830761882980
 SpriteRenderer:
   m_ObjectHideFlags: 1

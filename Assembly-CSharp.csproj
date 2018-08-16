@@ -65,10 +65,13 @@
     <Compile Include="Assets\_Completed-Assets\Scripts\Boss.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\BossDummy.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\_Completed-Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\DestroyArea.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Emitter.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\_Completed-Assets\Scripts\EnemyType2.cs" />
+    <Compile Include="Assets\_Completed-Assets\Scripts\EnemyType3.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Manager.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Player.cs" />

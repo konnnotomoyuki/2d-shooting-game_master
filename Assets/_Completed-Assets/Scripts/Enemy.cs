@@ -74,11 +74,11 @@ public class Enemy : MonoBehaviour
             // スコアコンポーネントを取得してポイントを追加
             FindObjectOfType<Score>().AddPoint(point);
 
-            // 爆発
-            spaceship.Explosion();
-
             // エネミーの削除
             Destroy(gameObject);
+
+            // 爆発
+            spaceship.Explosion();              
         }
         else
         {
