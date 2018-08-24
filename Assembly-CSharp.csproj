@@ -70,8 +70,6 @@
     <Compile Include="Assets\_Completed-Assets\Scripts\Effect.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Emitter.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\_Completed-Assets\Scripts\EnemyType2.cs" />
-    <Compile Include="Assets\_Completed-Assets\Scripts\EnemyType3.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Manager.cs" />
     <Compile Include="Assets\_Completed-Assets\Scripts\Player.cs" />

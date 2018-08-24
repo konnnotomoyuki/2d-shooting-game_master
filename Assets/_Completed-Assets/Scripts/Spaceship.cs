@@ -10,7 +10,7 @@ public class Spaceship : MonoBehaviour
     // 弾を撃つ間隔
     public float shotDelay;
 
-    public float size = 1;
+    public int size;
 
     // 弾のPrefab
     public GameObject bullet;
@@ -44,14 +44,14 @@ public class Spaceship : MonoBehaviour
         {
             if (size == 2)
             {
-                InvokeRepeating("Explode", 0.1f, 0.1f);
+                InvokeRepeating("Explode", 0.1f, 1.0f);
             }
             else if(size == 3)
             {
                 InvokeRepeating("Explode", 0.1f, 0.1f);
-                InvokeRepeating("Explode", 1.0f, 0.1f);
-                InvokeRepeating("Explode", 1.0f, 0.1f);
-                InvokeRepeating("Explode", 1.0f, 0.1f);
+                InvokeRepeating("Explode", 0.1f, 1.0f);
+                InvokeRepeating("Explode", 0.1f, 1.0f);
+                InvokeRepeating("Explode", 0.1f, 1.0f);
             }
         }
     }
@@ -59,14 +59,7 @@ public class Spaceship : MonoBehaviour
     public void Explode()
     {
         float x = Random.Range(-0.7f, 0.7f); float y = Random.Range(-0.7f, 0.7f);
-
         Instantiate(explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
-        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
-        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
-        x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
-        Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
         x = Random.Range(-0.7f, 0.7f); y = Random.Range(-0.7f, 0.7f);
         Instantiate(s_explosion, transform.position + new Vector3(x, y, 0.0f), transform.rotation);
     }

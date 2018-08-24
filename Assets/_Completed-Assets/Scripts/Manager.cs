@@ -8,12 +8,17 @@ public class Manager : MonoBehaviour
     // Playerプレハブ
     public GameObject player;
 
+    // キャンバス
+    private GameObject Canvas;
+
     // タイトル
     private GameObject ShootingGame;
     private GameObject PressX;
-    private GameObject Effect;
-    private GameObject Canvas;
+    
+    // ゲームクリア時演出
     private GameObject ClearGame;
+
+    // ボス演出
     private GameObject BossComing;
 
     void Start()
@@ -21,7 +26,6 @@ public class Manager : MonoBehaviour
         // Canvas内のゲームオブジェクトを検索し取得する
         ShootingGame = GameObject.Find("Shooting Game");
         PressX = GameObject.Find("Press X");
-        Effect = GameObject.Find("Effect");
         Canvas = GameObject.Find("Canvas");
 
         ClearGame = Canvas.transform.Find("ClearGame").gameObject;
@@ -35,7 +39,7 @@ public class Manager : MonoBehaviour
         if (IsPlaying() == false && Input.GetKeyDown(KeyCode.X))
         {
             GameStart();
-        } 
+        }
     }
 
     void GameStart()
@@ -52,8 +56,22 @@ public class Manager : MonoBehaviour
         FindObjectOfType<Score>().Save();
 
         // ゲームオーバー時に、タイトルを表示する
-        ShootingGame.SetActive(true);
-        PressX.SetActive(true);
+        // または、ボスが出現していない場合、或いはボスが出現しており倒した状態でない場合のみタイトルを表示する
+        if (FindObjectOfType<Boss>() == null
+            || (FindObjectOfType<Boss>() != null && FindObjectOfType<Boss>().blnBossDestroy != true))
+        {
+            ShootingGame.SetActive(true);
+            PressX.SetActive(true);
+            return;
+        }
+
+        // ゲームオーバーの表示が出た後にボスを倒した場合、ゲームオーバーの表示を消してクリアの表示を出す
+        if ((ShootingGame.activeSelf == true && PressX.activeSelf == true) &&
+            FindObjectOfType<Boss>().blnBossDestroy == true)
+        {
+            ShootingGame.SetActive(false);
+            PressX.SetActive(false);
+        }
     }
 
     public void BossAppear()

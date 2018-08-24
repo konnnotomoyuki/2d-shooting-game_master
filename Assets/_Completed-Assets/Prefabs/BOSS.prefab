@@ -274,6 +274,7 @@ MonoBehaviour:
   point: 3000
   intCurrentNum: 0
   intBlinkNum: 20
+  blnBossDestroy: 0
   speed: {x: 0.02, y: 0.02}
   TargetObjects:
   - {fileID: 1897641092358256, guid: 1a5010cb73a6d4e4897230a96f50aa2a, type: 2}

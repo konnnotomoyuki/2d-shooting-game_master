@@ -4,20 +4,20 @@ using System.Collections;
 public class Boss : MonoBehaviour
 {
     // ヒットポイント
-    public int hp = 100;
+    public int hp;
 
     // スコアのポイント
-    public int point = 100;
+    public int point;
 
     // 現在のターゲットオブジェクトの番号
-    public int intCurrentNum = 0;
+    public int intCurrentNum;
 
-    public int intBlinkNum = 20;
+    public int intBlinkNum;
 
     // ラジアン変数
     private float rad;
 
-    private bool blnBossDestroy = false; 
+    public bool blnBossDestroy = false; 
 
     // 速度
     public Vector2 speed = new Vector2(1f, 1f);
@@ -119,7 +119,6 @@ public class Boss : MonoBehaviour
                 MoveChange();
             }
         }
-
     }
 
     private void XYMove()

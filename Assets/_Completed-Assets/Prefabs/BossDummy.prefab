@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 60173951770663262}
   - component: {fileID: 114125640438250920}
   - component: {fileID: 82388022622624528}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: BossDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -215,6 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9db9144c646494e8d93e0a051e844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  intPlayerNum: 3
+  blnDamage: 0
 --- !u!114 &114882708957528762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,9 +230,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   shotDelay: 0.05
+  size: 0
   bullet: {fileID: 1497888445206650, guid: 4a1953f702a852143acdfbd39103a9d4, type: 2}
   canShot: 0
   explosion: {fileID: 1543259685911060, guid: a7ed0315d0e664da9bcb03d47e23e682, type: 2}
+  s_explosion: {fileID: 0}
 --- !u!212 &212713633926505114
 SpriteRenderer:
   m_ObjectHideFlags: 1

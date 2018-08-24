@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5000000}
   - component: {fileID: 11400002}
   - component: {fileID: 6000000}
-  - component: {fileID: 114696421783717178}
+  - component: {fileID: 114027375951701228}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 5000002}
   - component: {fileID: 11400004}
   - component: {fileID: 6000002}
-  - component: {fileID: 114565345689154596}
+  - component: {fileID: 114100295950969010}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 5000008}
   - component: {fileID: 11400016}
   - component: {fileID: 6000008}
-  - component: {fileID: 114183912522611640}
+  - component: {fileID: 114511268833296920}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1042,6 +1042,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1073,6 +1075,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 10
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1345,35 +1349,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100016}
   m_IsPrefabParent: 1
---- !u!114 &114183912522611640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  point: 100
-  speed: {x: 0.01, y: 0.01}
---- !u!114 &114565345689154596
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 10
-  point: 100
-  speed: {x: 0.05, y: 0.05}
---- !u!114 &114696421783717178
+--- !u!114 &114027375951701228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1381,9 +1357,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 10
   point: 100
+  intEnemyType: 2
   speed: {x: 0.05, y: 0.05}
+--- !u!114 &114100295950969010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  point: 100
+  intEnemyType: 2
+  speed: {x: 0.05, y: 0.05}
+--- !u!114 &114511268833296920
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 10
+  point: 100
+  intEnemyType: 2
+  speed: {x: 0.01, y: 0.01}

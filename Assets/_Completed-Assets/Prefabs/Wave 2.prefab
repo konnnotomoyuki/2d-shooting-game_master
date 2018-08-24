@@ -1327,7 +1327,7 @@ GameObject:
   - component: {fileID: 5000038}
   - component: {fileID: 11400076}
   - component: {fileID: 6000038}
-  - component: {fileID: 114974091406474360}
+  - component: {fileID: 114092477623524958}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1348,7 +1348,7 @@ GameObject:
   - component: {fileID: 5000040}
   - component: {fileID: 11400082}
   - component: {fileID: 6000040}
-  - component: {fileID: 114767516680288548}
+  - component: {fileID: 114123633071332330}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1459,7 +1459,7 @@ GameObject:
   - component: {fileID: 5000042}
   - component: {fileID: 11400084}
   - component: {fileID: 6000042}
-  - component: {fileID: 114086588651380410}
+  - component: {fileID: 114970428021166030}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1591,7 +1591,7 @@ GameObject:
   - component: {fileID: 5000070}
   - component: {fileID: 11400140}
   - component: {fileID: 6000070}
-  - component: {fileID: 114349841984961712}
+  - component: {fileID: 114674408527204360}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1612,7 +1612,7 @@ GameObject:
   - component: {fileID: 5000072}
   - component: {fileID: 11400146}
   - component: {fileID: 6000072}
-  - component: {fileID: 114204596661050832}
+  - component: {fileID: 114089305288709638}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1723,7 +1723,7 @@ GameObject:
   - component: {fileID: 5000074}
   - component: {fileID: 11400148}
   - component: {fileID: 6000074}
-  - component: {fileID: 114746401074374548}
+  - component: {fileID: 114710833488745460}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -5059,6 +5059,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5090,6 +5092,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5139,6 +5143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400012
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5152,6 +5158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400014
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5201,6 +5209,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5232,6 +5242,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5245,6 +5257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5276,6 +5290,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400030
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5325,6 +5341,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5338,6 +5356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400038
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5387,6 +5407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5418,6 +5440,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5431,6 +5455,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400050
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5462,6 +5488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5511,6 +5539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5524,6 +5554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5573,6 +5605,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5604,6 +5638,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5617,6 +5653,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400074
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5702,6 +5740,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   point: 100
+  intEnemyType: 1
+  speed: {x: 0, y: 0}
 --- !u!114 &11400138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6955,21 +6995,7 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100016}
   m_IsPrefabParent: 1
---- !u!114 &114086588651380410
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  point: 100
-  speed: {x: 0.01, y: 0.01}
---- !u!114 &114204596661050832
+--- !u!114 &114089305288709638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -6977,55 +7003,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 100290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
   point: 100
+  intEnemyType: 2
   speed: {x: 0.01, y: 0.01}
---- !u!114 &114349841984961712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  point: 100
-  speed: {x: 0.01, y: 0.01}
---- !u!114 &114746401074374548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  point: 100
-  speed: {x: 0.01, y: 0.01}
---- !u!114 &114767516680288548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 1
-  point: 100
-  speed: {x: 0.01, y: 0.01}
---- !u!114 &114974091406474360
+--- !u!114 &114092477623524958
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -7033,9 +7018,70 @@ MonoBehaviour:
   m_GameObject: {fileID: 100160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3254dc3d03cbeab4a8d1b03a8da9f41c, type: 3}
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
   point: 100
+  intEnemyType: 2
+  speed: {x: 0.01, y: 0.01}
+--- !u!114 &114123633071332330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  point: 100
+  intEnemyType: 2
+  speed: {x: 0.01, y: 0.01}
+--- !u!114 &114674408527204360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  point: 100
+  intEnemyType: 2
+  speed: {x: 0.01, y: 0.01}
+--- !u!114 &114710833488745460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  point: 100
+  intEnemyType: 2
+  speed: {x: 0.01, y: 0.01}
+--- !u!114 &114970428021166030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 748bc74c1fabf4c5cbcca4c2475615f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  point: 100
+  intEnemyType: 2
   speed: {x: 0.01, y: 0.01}

@@ -10,8 +10,6 @@ public class Effect : MonoBehaviour
 
     bool blnColorChange = true;
 
-    private int intWaveLength;
-
     private float timeout = 60f;
 
     private float timeelapsed = 0;
@@ -21,8 +19,6 @@ public class Effect : MonoBehaviour
     {
         image = GetComponent<Image>();
         image.color = Color.clear;
-
-        intWaveLength = (FindObjectOfType<Emitter>().waves.Length - 1);
     }
 	
 	// Update is called once per frame

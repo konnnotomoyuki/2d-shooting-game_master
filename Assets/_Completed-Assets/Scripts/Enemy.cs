@@ -4,10 +4,30 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     // ヒットポイント
-    public int hp = 1;
+    public int hp;
 
     // スコアのポイント
-    public int point = 100;
+    public int point;
+
+    // 敵の種類
+    public int intEnemyType;
+
+    // 速度
+    public Vector2 speed;
+
+    // ターゲットとなるオブジェクト
+    Vector2 PlayerPosition;
+
+    // 現在位置
+    Vector2 Position;
+
+    // 大型エネミーの点滅表示の際使用
+    SpriteRenderer sprite;
+
+    // ラジアン変数
+    private float rad;
+
+    private bool blnEnemyDestroy = false;
 
     // Spaceshipコンポーネント
     Spaceship spaceship;
@@ -18,7 +38,16 @@ public class Enemy : MonoBehaviour
         spaceship = GetComponent<Spaceship>();
 
         // ローカル座標のY軸のマイナス方向に移動する
-        Move(transform.up * -1);
+        if (intEnemyType == 1 || intEnemyType == 3)
+        {
+            Move(transform.up * -1);
+        }
+
+        // 大型エネミーの場合のみSpriteRendererコンポーネントを取得
+        if (intEnemyType == 3)
+        {
+            sprite = GetComponent<SpriteRenderer>();
+        }
 
         // canShotがfalseの場合、ここでコルーチンを終了させる
         if (spaceship.canShot == false)
@@ -28,17 +57,57 @@ public class Enemy : MonoBehaviour
 
         while (true)
         {
-            // 子要素を全て取得する
-            for (int i = 0; i < transform.childCount; i++)
+            if (intEnemyType == 1 || intEnemyType == 3)
             {
-                Transform shotPosition = transform.GetChild(i);
+                // 子要素を全て取得する
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Transform shotPosition = transform.GetChild(i);
+
+                    // ShotPositionの位置/角度で弾を撃つ
+                    spaceship.Shot(shotPosition);
+                }
+
+                // shotDelay秒待つ
+                yield return new WaitForSeconds(spaceship.shotDelay);
+            }
+            else if (intEnemyType == 2)
+            {
+                Transform shotPosition = transform.GetChild(1);
 
                 // ShotPositionの位置/角度で弾を撃つ
                 spaceship.Shot(shotPosition);
-            }
 
-            // shotDelay秒待つ
-            yield return new WaitForSeconds(spaceship.shotDelay);
+                // shotDelay秒待つ
+                yield return new WaitForSeconds(spaceship.shotDelay);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        // 自機を追尾するType2エネミーの場合のみ起動
+        if (intEnemyType == 2)
+        {
+            // Playerのゲームオブジェクトがあるか否かで行動を変える
+            if (FindObjectOfType<Player>() != null) {
+                PlayerPosition = FindObjectOfType<Player>().transform.position;
+                Position = transform.position;
+
+                rad = Mathf.Atan2(
+                    PlayerPosition.y - transform.position.y,
+                    PlayerPosition.x - transform.position.x);
+
+                Position.x += speed.x * Mathf.Cos(rad);
+                Position.y += speed.y * Mathf.Sin(rad);
+                transform.position = Position;
+            }
+        }
+
+        // 大型であるType3エネミーの場合のみ起動
+        if (blnEnemyDestroy == true)
+        {
+            StartCoroutine(Blink());
         }
     }
 
@@ -74,15 +143,49 @@ public class Enemy : MonoBehaviour
             // スコアコンポーネントを取得してポイントを追加
             FindObjectOfType<Score>().AddPoint(point);
 
-            // エネミーの削除
-            Destroy(gameObject);
+            if (intEnemyType == 1 || intEnemyType == 2)
+            {
+                // エネミーの削除
+                Destroy(gameObject);
 
-            // 爆発
-            spaceship.Explosion();              
+                // サイズの大きいエネミーの場合、レイヤーを変更する
+                if (intEnemyType == 2)
+                {
+                    gameObject.layer = 0;
+                }
+
+                // 爆発
+                spaceship.Explosion();
+            }
+            else if (intEnemyType == 3)
+            {
+                blnEnemyDestroy = true;
+
+                // 爆発
+                spaceship.Explosion();
+
+                Invoke("EnemyDestroy", 2);
+            }
         }
         else
         {
             spaceship.GetAnimator().SetTrigger("Damage");
         }
+    }
+
+    // 点滅コルーチン
+    IEnumerator Blink()
+    {
+        while (true)
+        {
+            sprite.enabled = !sprite.enabled;
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
+    void EnemyDestroy()
+    {
+        // エネミーの削除
+        Destroy(gameObject);
     }
 }
